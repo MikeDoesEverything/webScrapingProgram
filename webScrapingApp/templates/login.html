@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if user.isauthenticated %}
+
+<h1>hello {{user}}</h1>
+
+{% else %}
+<div class="col-md-6 offset-md-3">
+  <form method = 'POST' action = {% url 'login' %}> 
+      {% csrf_token %}
+      <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" placeholder="username" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label" >Password</label>
+            <input type="password" class="form-control" name="password" placeholder="password" required>
+          </div>
+          {% comment %} <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="show-password">
+            <label class="form-check-label" for="exampleCheck1" id="show-password-checkbox">Show Password</label>
+          </div> {% endcomment %}
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+  </form>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% comment %} 
+show password fields JS and HTML
+
+
+<div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="showPasswordCheckbox">
+  <label class="form-check-label" for="showPasswordCheckbox">Show Password</label>
+</div>
+<div class="mb-3">
+  <label for="exampleInputPassword1" class="form-label">Password</label>
+  <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Password" required>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
+    const passwordInput = document.getElementById('passwordInput');
+
+    showPasswordCheckbox.addEventListener('change', function() {
+        if (showPasswordCheckbox.checked) {
+            passwordInput.type = 'text'; // Change input type to text to show password
+        } else {
+            passwordInput.type = 'password'; // Change input type to password to hide password
+        }
+    });
+});
+</script> 
+{% endcomment %}

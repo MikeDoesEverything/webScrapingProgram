@@ -1,0 +1,13 @@
+Title,Price,Stock,Date,Errors
+Razer Cobra Pro -,£.,,2024-03-15,Issue with iteration 1 of web scraping
+Razer BlackWidow V4 Pro,£229.00,12,2024-03-15
+LG UltraWide Curved Monitor,£254.97,24,2024-03-15
+SteelSeries Aerox 5 Gaming,£64.99,9,2024-03-15
+SteelSeries Apex 7 TKL,£149.99,4,2024-03-15
+Veno Scorp Gaming PC,£804.95,,2024-03-15,Issue with iteration 6 of web scraping
+Razer Cobra Pro -,£.,,2024-04-17,Issue with iteration 1 of web scraping
+Razer BlackWidow V4 Pro,£205.00,,2024-04-17,Issue with iteration 2 of web scraping
+LG UltraWide Curved Monitor,£291.50,,2024-04-17,Issue with iteration 3 of web scraping
+SteelSeries Aerox 5 -,£64.99,,2024-04-17,Issue with iteration 4 of web scraping
+SteelSeries Apex 7 TKL,£99.99,,2024-04-17,Issue with iteration 5 of web scraping
+Veno Scorp Gaming PC,£804.95,,2024-04-17,Issue with iteration 6 of web scraping

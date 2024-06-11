@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+    <h1>Amazon Web Scraper Interface</h1>
+
+    <h2>just post the amazon url in the box below</h2>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>Scrape Data</button>
+    </form>
+{% else %}
+    <h2>What in the hell are you doing? you must login first!!</h2>
+{% endif %}
+{% endblock %}
